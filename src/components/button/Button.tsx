@@ -2,11 +2,15 @@ import { IonButton } from '@ionic/react';
 import React, { FC } from 'react';
 
 interface ButtonPropType {
-	clicked: () => void;
+	onClick: () => void;
 }
 
-const Button: FC<ButtonPropType> = ({ clicked }) => {
-	return <IonButton onClick={clicked}>Button</IonButton>;
+const Button: FC<ButtonPropType> = ({ onClick }) => {
+	return (
+		<IonButton slot='end' onClick={onClick}>
+			Add user
+		</IonButton>
+	);
 };
 
 export default Button;
